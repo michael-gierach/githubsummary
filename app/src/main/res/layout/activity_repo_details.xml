@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/DetailSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detailTextSideMargins"
+            android:text="@string/detail_section_name"/>
+
+        <TextView
+            android:id="@+id/detail_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailSectionBody"
+            tools:text="githubsummary"/>
+
+        <TextView
+            style="@style/DetailSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_section_description"/>
+
+        <TextView
+            android:id="@+id/detail_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DetailSectionBody"
+            tools:text="Blah blah blah"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/DetailSectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_section_owner"/>
+
+                <TextView
+                    android:id="@+id/detail_owner_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DetailSectionBody"
+                    tools:text="michael-gierach"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/DetailSectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_section_owner_type"/>
+
+                <TextView
+                    android:id="@+id/detail_owner_type_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DetailSectionBody"
+                    tools:text="User"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/DetailSectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_section_private"/>
+
+                <TextView
+                    android:id="@+id/detail_is_private_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DetailSectionBody"
+                    tools:text="Yes"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/detail_star_count"
+                    style="@style/DetailSectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/selector_star_check"
+                    tools:text="@string/detail_section_star_format"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/DetailSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_section_languages"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/detailTextSideMargins"
+            android:layout_marginEnd="@dimen/detailTextSideMargins"
+            android:id="@+id/detail_language_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

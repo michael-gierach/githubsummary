@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detailTextSideMargins">8dp</dimen>
+    <dimen name="detailLanguageBoxRadius">6dp</dimen>
+    <dimen name="detailLanguageBoxPadding">4dp</dimen>
+</resources>

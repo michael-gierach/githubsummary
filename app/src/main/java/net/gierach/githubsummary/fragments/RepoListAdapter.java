@@ -2,6 +2,7 @@ package net.gierach.githubsummary.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,13 +12,14 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 import net.gierach.githubsummary.R;
+import net.gierach.githubsummary.RepoDetailsActivity;
 import net.gierach.githubsummary.provider.ReposContract;
 
 import java.text.NumberFormat;
 
 public class RepoListAdapter extends CursorAdapter {
 
-    private static class ViewHolder {
+    private class ViewHolder {
         final View mHeaderView;
         final TextView mHeaderTitle;
         final TextView mHeaderCount;
@@ -52,10 +54,11 @@ public class RepoListAdapter extends CursorAdapter {
     private final NumberFormat mNumberFormat;
 
     private final int[] columnIndexes;
+    private final Activity mActivity;
 
     public RepoListAdapter(Activity context) {
         super(context, null, 0);
-
+        this.mActivity = context;
         mNumberFormat = NumberFormat.getIntegerInstance();
         mNumberFormat.setGroupingUsed(true);
 
@@ -83,7 +86,16 @@ public class RepoListAdapter extends CursorAdapter {
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View result = LayoutInflater.from(context).inflate(R.layout.repo_list_item, null);
 
-        ViewHolder viewHolder = new ViewHolder(result);
+        final ViewHolder viewHolder = new ViewHolder(result);
+
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = RepoDetailsActivity.createLaunchIntent(mActivity, viewHolder.recordId);
+
+                mActivity.startActivity(intent);
+            }
+        });
 
         return result;
     }

@@ -16,4 +16,15 @@
 
     <string name="menu_refresh">Refresh</string>
     <string name="menu_sign_out">Remove Account</string>
+
+    <string name="detail_title">Repository Details</string>
+    <string name="detail_section_owner">Owner</string>
+    <string name="detail_section_owner_type">Owner Type</string>
+    <string name="detail_section_name">Name</string>
+    <string name="detail_section_description">Description</string>
+    <string name="detail_section_private">Private</string>
+    <string name="detail_section_languages">Languages</string>
+    <string name="detail_section_star_format">Star (%s)</string>
+    <string name="private_yes">Yes</string>
+    <string name="private_no">No</string>
 </resources>

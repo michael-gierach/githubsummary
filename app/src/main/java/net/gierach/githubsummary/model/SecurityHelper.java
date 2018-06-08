@@ -55,7 +55,7 @@ public class SecurityHelper {
         if (!TextUtils.isEmpty(base64)) {
             binary = Base64.decode(base64, Base64.NO_WRAP | Base64.URL_SAFE);
         } else {
-            binary = new byte[KEY_SIZE];
+            binary = new byte[KEY_SIZE / 8];
             SecureRandom secureRandom = new SecureRandom();
             secureRandom.nextBytes(binary);
             base64 = Base64.encodeToString(binary, Base64.NO_WRAP | Base64.URL_SAFE);

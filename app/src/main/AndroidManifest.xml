@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RepoDetailsActivity"
+            android:label="@string/detail_title"
+            android:exported="false"/>
+
         <service android:name=".service.RepoFetchService"
             android:exported="false"/>
 

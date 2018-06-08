@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements UserAccountDao.Li
     private void checkMode() {
         UserAccountDao userAccountDao = UserAccountDao.getInstance(this);
         UserAccount currentAccount = userAccountDao.getCurrentAccount();
-        if (currentAccount == null || !currentAccount.isValidated()) {
+        if (currentAccount == null || !Boolean.TRUE.equals(currentAccount.isValidated())) {
             showSignInFragment();
         } else {
             showRepoListFragment();
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements UserAccountDao.Li
 
     @Override
     public void onCurrentAccountChanged(UserAccount userAccount) {
-
+        checkMode();
     }
 
     @Override
