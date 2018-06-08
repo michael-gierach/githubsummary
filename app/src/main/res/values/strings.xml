@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Git Hub Summary</string>
+    <string name="signing_in">Signing In&#8230;</string>
+
+    <string name="next">Next"</string>
+    <string name="username_label">GitHub Username</string>
+    <string name="password_label">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_failed">Failed to Sign In</string>
+
+    <string name="syncing_repos">Fetching your GitHub repositories&#8230;</string>
+    <string name="no_repos">No GitHub repositories.</string>
+    <string name="syncing_status">Syncing&#8230;</string>
+
+    <string name="count_format">(%s)</string>
+
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_sign_out">Remove Account</string>
+</resources>
